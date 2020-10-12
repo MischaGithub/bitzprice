@@ -1,11 +1,14 @@
 import Fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
+import Prices from "../components/Prices";
 
-const Index = () => (
+const Index = (props) => (
     // Wrapping everything in the layout component
     <Layout>
          <div>
             <h1>Hello Next.js</h1>
+            {/* Access to the bpi */}
+            <Prices bpi={props.bpi} />
         </div>
     </Layout>
    
